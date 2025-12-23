@@ -1,0 +1,1 @@
+print('om namo bhagavate vasudevaya namah')
