@@ -75,54 +75,127 @@ console.log(`There is no 'on' in both dragon and python ${!isonexist}`);
 
 * Use the Date object to do the following activities
 
-* What is the year today?
-* What is the month today as a number?
-* What is the date today?
-* What is the day today as a number?
-* What is the hours now?
-* What is the minutes now?
-* Find out the numbers of seconds elapsed from January 1, 1970 to now.
+What is the year today?
+let now = new Date()
+console.log(now.getFullYear())
+What is the month today as a number?
+console.log(now.getMonth()+1);
+What is the date today?
+console.log(now.getDate());
+What is the day today as a number?
+console.log(now.getDay());
+What is the hours now?
+console.log(now.getHours());
+What is the minutes now?
+console.log(now.getMinutes());
+
+Find out the numbers of seconds elapsed from January 1, 1970 to now.
+console.log(Date.now());
 Exercises: Level 2
 * Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
 
 Enter base: 20
 Enter height: 10
 The area of the triangle is 100
+
+let base = prompt('Enter base of the triangle', 'the details should be in metres');
+let height = prompt('Enter height of the triangle', 'the details should be in metres');
+let area = 0.5 * base * height;
+console.log(`The area of the triangle is ${area}`);
 * Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
 
 Enter side a: 5
 Enter side b: 4
 Enter side c: 3
 The perimeter of the triangle is 12
+
+let a = prompt('enter the length of side a of given triangle','in meters');
+let b = prompt('enter the length of side b of given triangle','in meters');
+let c = prompt('enter the length of side c of given triangle','in meters');
+let perimeter = +a + (+b) + (+c);
+console.log(`The perimeter of the triangle is ${perimeter}`);
 * Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
+
+let a = prompt('enter the length of side a of given rectangle','in meters');
+let b = prompt('enter the length of side b of given rectangle','in meters');
+let area = +a * (+b);
+let perimeter = ((+a) + (+b)) * 2;
+console.log(`The area of the rectangle is ${area}`);
+console.log(`The perimeter of the rectangle is ${perimeter}`);
 
 * Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
 
+let a = prompt('enter the radius of given circle','in meters');
+let area = Math.PI*((+a) ** 2);
+let perimeter = 2*Math.PI*(+a);
+console.log(`The area of the circle is ${area}`);
+console.log(`The perimeter of the circle is ${perimeter}`);
+
 * Calculate the slope, x-intercept and y-intercept of y = 2x -2
+
+let x = Number(prompt('enter the x1 intercept value'));
+let y = 2*(x) - 2;
+let a = Number(prompt('enter the x2 intercept value'));
+let b = 2*(a) - 2;
+let slope = (b-y)/(a-x);
+console.log(`the slove of the given equation is ${slope}`);
 
 * Slope is m = (y2-y1)/(x2-x1). Find the slope between point (2, 2) and point(6,10)
 
-* Compare the slope of above two questions.
+let x = 2;
+let y = 2;
+let a = 6;
+let b = 10;
+let slope = (b-y)/(a-x);
+console.log(`the slove of the given equation is ${slope}`);
 
+* Compare the slope of above two questions.
+//true
+//in all cases
 * Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.
+
+let x = Number(prompt('give the value of x '));
+let y = x**2 + 6*x + 9;
+
+y
+? console.log(`the value you entered of x=${x} is not the root of y`)
+: console.log(`the value you entered of x=${x} is the root of y`);
 
 * Writ a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
 
 Enter hours: 40
 Enter rate per hour: 28
 Your weekly earning is 1120
+
+let _hours = Number(prompt('enter the total working hours of the person'));
+let _pphours = Number(prompt('enter the per hour wage of the person'));
+console.log(_hours*_pphours);
 * If the length of your name is greater than 7 say, your name is long else say your name is short.
 
+let _name = prompt("enter your name");
+_name.length > 7
+  ? console.log(`your name ${_name} is long`)
+  : console.log(`your name ${_name} is short`);
 * Compare your first name length and your family name length and you should get this output.
 
 let firstName = 'Asabeneh'
 let lastName = 'Yetayeh'
-* Your first name, Asabeneh is longer than your family name, Yetayeh
+Your first name, Asabeneh is longer than your family name, Yetayeh
+
+let firstName = 'Mithlesh';
+let lastName = 'Gupta';
+firstName.length > lastName.length
+? console.log(`your first name, ${firstName} is longer than your family name, ${lastName} `)
+: console.log(`your first name, ${firstName} is shorter than your family name, ${lastName} `);
 * Declare two variables myAge and yourAge and assign them initial values and myAge and yourAge.
 
 let myAge = 250
 let yourAge = 25
 I am 225 years older than you.
+
+let myage = 25;
+let yourage = 15;
+console.log(`i am ${myage-yourage} years older than you.`)
 * Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
 
 Enter birth year: 1995
@@ -130,15 +203,55 @@ You are 25. You are old enough to drive
 
 Enter birth year: 2005
 You are 15. You will be allowed to drive after 3 years.
+
+let birth_year = Number(prompt('enter your birth year'));
+let age = 2025 - birth_year;
+age >= 18
+? console.log(`You are ${age}. You are old enough to drive`)
+: console.log(`You are ${age}. You will be allowed to drive after ${18-age} years`);
 * Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
 
 Enter number of years you live: 100
 You lived 3153600000 seconds.
+
+let year_lived = Number(prompt('enter your age in years'));
+let life_remaining = 100 - year_lived;
+console.log(`you can live ${life_remaining*60*60*24*365} more seconds roughly`)
 * Create a human readable time format using the Date time object
 
 YYYY-MM-DD HH:mm
 DD-MM-YYYY HH:mm
 DD/MM/YYYY HH:mm
+
+
+let now = new Date();
+// 2025-12-24T16:26:18.059Z
+// 2025-12-24   → Date (YYYY-MM-DD)
+// T            → Separator between date and time
+// 16:26:18     → Time (HH:MM:SS) in 24-hour format
+// .059         → Milliseconds (59 ms)
+// Z            → UTC time zone (Zulu time)
+
+// console.log(now.toString());
+// console.log(now.toUTCString());
+// YYYY-MM-DD HH:mm
+console.log(`YYYY-MM-DD HH:mm\n${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()} ${now.getHours()}:${now.getMinutes()}`)
+// DD-MM-YYYY HH:mm
+console.log(`DD-MM-YYYY HH:mm\n${now.getDate()}-${now.getMonth()+1}-${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}`)
+// DD/MM/YYYY HH:mm
+console.log(`DD/MM/YYYY HH:mm\n${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}`)
 Exercises: Level 3
 * Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
 YYY-MM-DD HH:mm eg. 20120-01-02 07:05
+
+
+let iso = '2025-01-24T01:38:18.059Z';
+let now = new Date(iso);
+let year = String(now.getFullYear()).padStart(4,'0');
+let month = String(now.getMonth()+1).padStart(2,'0');
+let day = String(now.getDate()).padStart(2,'0');
+let hours = String(now.getHours()).padStart(2,'0');
+let minutes = String(now.getMinutes()).padStart(2,'0');
+
+// YYYY-MM-DD HH:mm
+console.log(`YYYY-MM-DD HH:mm\n${year}-${month}-${day} ${hours}:${minutes}`)
