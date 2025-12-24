@@ -1,0 +1,3 @@
+For deep knowledge (Interviews)
+operator precedence - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence
+JS comparison table - https://dorey.github.io/JavaScript-Equality-Table/
