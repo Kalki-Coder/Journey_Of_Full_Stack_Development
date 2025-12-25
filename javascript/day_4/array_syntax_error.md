@@ -1,6 +1,3 @@
-
----
-````md
 # ❌ Issue in JavaScript Month Checker Code
 **one JavaScript syntax mistake** causing the issue.
 
