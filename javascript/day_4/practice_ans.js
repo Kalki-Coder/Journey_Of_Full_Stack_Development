@@ -56,3 +56,48 @@ if (["december", "january", "february"].includes(month.toLowerCase())) {
 } else {
   console.log("i can think of visiting to your province during this month");
 }
+// check weekend or weekday
+let day = prompt("enter the day today");
+if (
+  ["monday", "tuesday", "wednesday", "thursday", "friday"].includes(
+    day.toLowerCase()
+  )
+) {
+  console.log(`${day.toLowerCase()} is a working day.`);
+} else {
+  console.log(`Enjoy dear, ${day.toLowerCase()} is a weekend.`);
+}
+// check how many days in entered month
+let month1 = prompt("enter the month");
+if (
+  ["january", "march", "may", "july", "august", "october", "december"].includes(
+    month1.toLowerCase()
+  )
+) {
+  console.log(`${month1.toLowerCase()} has 31 days`);
+} else if (["february"].includes(month1.toLowerCase())) {
+  console.log(`${month1.toLowerCase()} has 28 days`);
+} else {
+  console.log(`${month1.toLowerCase()} has 30 days`);
+}
+// check how many days in entered month : consider leap year
+let month2 = prompt("enter the month");
+if (
+  ["january", "march", "may", "july", "august", "october", "december"].includes(
+    month2.toLowerCase()
+  )
+) {
+  console.log(`${month2.toLowerCase()} has 31 days`);
+} else if (["february"].includes(month2.toLowerCase())) {
+  console.log(`${month2.toLowerCase()} has 28 days and maybe 29 days if it is a leap year`);
+} else {
+  console.log(`${month2.toLowerCase()} has 30 days`);
+}
+
+//or i can solve this long way with multiple conditions
+// let [a, b] = prompt('enter the month, year')
+//               .split(',')
+//               .map(x => x.trim());
+
+// console.log(a); // month
+// console.log(b); // year ----using this destructuring syntax.
