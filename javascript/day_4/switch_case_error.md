@@ -113,13 +113,3 @@ switch (true) {
 
 `switch` is **not meant for range comparisons** in JavaScript.
 For grading systems, **`if–else` is the cleanest and safest approach**.
-
-```
-
----
-
-If you want, I can also:
-- Add **syntax highlighting hints**
-- Convert this into a **GitHub README style**
-- Or compress it into a **short study note** 😄
-```
