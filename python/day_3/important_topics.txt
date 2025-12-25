@@ -1,0 +1,2 @@
+python_operators_bitwise # Not Important
+https://www.w3schools.com/python/python_operators_bitwise.asp

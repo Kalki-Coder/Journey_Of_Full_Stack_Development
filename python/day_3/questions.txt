@@ -1,0 +1,105 @@
+💻 Exercises - Day 3
+* Declare your age as integer variable
+age = 25
+* Declare your height as a float variable
+height = 163.5
+* Declare a variable that store a complex number
+complex_no = 1 + 1j
+* Write a script that prompts the user to enter base and height of the triangle and calculate an area of this triangle (area = 0.5 x b x h).
+    Enter base: 20
+    Enter height: 10
+    The area of the triangle is 100
+height = int(input("enter the height of the triangle :- "))
+base = int(input("enter the base of the triangle :- "))
+area = int((base*height)/2)
+print(f"the area of the triangle given is {area}")
+* Write a script that prompts the user to enter side a, side b, and side c of the triangle. Calculate the perimeter of the triangle (perimeter = a + b + c).
+Enter side a: 5
+Enter side b: 4
+Enter side c: 3
+* The perimeter of the triangle is 12
+
+a_side = int(input("enter the length of the a side of triangle :- "))
+b_side = int(input("enter the length of the b side of triangle :- "))
+c_side = int(input("enter the length of the c side of triangle :- "))
+perimeter_triangle = a_side + b_side + c_side
+print(f"the perimeter of the triangle given is {perimeter_triangle}")
+* Get length and width of a rectangle using prompt. Calculate its area (area = length x width) and perimeter (perimeter = 2 x (length + width))
+
+a_side = int(input("enter the length of the a side of rectangle :- "))
+b_side = int(input("enter the length of the b side of rectangle :- "))
+perimeter = (a_side+b_side)*2
+area = a_side*b_side
+print(f"area of the rectangle is {area} and perimeter of the rectangle is {perimeter}")
+* Get radius of a circle using prompt. Calculate the area (area = pi x r x r) and circumference (c = 2 x pi x r) where pi = 3.14.
+import math
+radius = int(input("enter the radius of the given circle :- "))
+circumferece = math.pi*2*radius
+area = math.pi*(radius**2)
+print(f"the circumference of the given circle is {circumferece} and area is {area}")
+* Calculate the slope, x-intercept and y-intercept of y = 2x -2
+x1 = int(input("enter the value of x1 :- "))
+y1 = 2*x1 - 2
+x2 = int(input("enter the value of x2 :- "))
+y2 = 2*x2 - 2
+slope = (y2 - y1)/(x2 - x1)
+print(f"the slope the given equation will always be {int(slope)} as it is a straight line")
+* Slope is (m = y2-y1/x2-x1). Find the slope and Euclidean distance between point (2, 2) and point (6,10)
+import math
+x1,y1,x2,y2 = (2,2,6,10)
+euclidean_distance = math.sqrt((y2-y1)**2 + (x2-x1)**2)
+slope = (y2 - y1)/(x2 - x1)
+print(f"the slope the given equation will always be {int(slope)} as it is a straight line and the euclidean distance is {euclidean_distance}")
+* Compare the slopes in tasks 8 and 9.
+they both are straight line thats why their slope will always be 2.
+* Calculate the value of y (y = x^2 + 6x + 9). Try to use different x values and figure out at what x value y is going to be 0.
+x = int(input("enter the value of x to find out y :- "))
+y = x**2 + 6*x + 9
+print(f"the root of the equation is {x}" if y==0 else f"try again the entered value of {x} is not the root")
+* Find the length of 'python' and 'dragon' and make a falsy comparison statement.
+print(len('python')!=len('jargon))
+* Use and operator to check if 'on' is found in both 'python' and 'dragon'
+# print('on' in 'python' and  'on' in 'jargon')
+* I hope this course is not full of jargon. Use in operator to check if jargon is in the sentence.
+saying = 'i hope this course is not full of jargon'
+print('jargon' in saying)
+* There is no 'on' in both dragon and python
+print('on' not in 'python' and  'on' not in 'jargon')
+print('on' not in 'python' or  'on' in 'jargon')
+* Find the length of the text python and convert the value to float and convert it to string
+print(str(float(len('python'))))
+* Even numbers are divisible by 2 and the remainder is zero. How do you check if a number is even or not using python?
+user_input = int(input("enter the digit in your mind :- "))
+print("even" if user_input % 2 == 0 else "odd")
+* Check if the floor division of 7 by 3 is equal to the int converted value of 2.7
+# True
+print((7//3)==int(2.7))
+* Check if type of '10' is equal to type of 10 #False
+* Check if int('9.8') is equal to 10 #False
+* Writ a script that prompts the user to enter hours and rate per hour. Calculate pay of the person?
+* Enter hours: 40
+* Enter rate per hour: 28
+* Your weekly earning is 1120
+
+hours, rph = map(int,input("enter the hours you worked and the rph decided by the govt. :- ").split())
+print(f"the person who worked {hours}h will earn {hours*rph}$ as per the {rph}$ per hour decided by the ruling govt.")
+* Write a script that prompts the user to enter number of years. Calculate the number of seconds a person can live. Assume a person can live hundred years
+Enter number of years you have lived: 100
+You have lived for 3153600000 seconds.
+
+years_onelived = int(input("enter your age in years :- "))
+print(f"as per the research data a person can live on an average 100 years that why you have lived {years_onelived*60*60*24*365} seconds and {(100-years_onelived)*60*60*24*365} seconds left for rest of your life")
+* Write a Python script that displays the following table
+1 1 1 1 1
+2 1 2 4 8
+3 1 3 9 27
+4 1 4 16 64
+5 1 5 25 125
+
+print(
+"""1 1 1 1 1
+2 1 2 4 8
+3 1 3 9 27
+4 1 4 16 64
+5 1 5 25 125"""
+)
