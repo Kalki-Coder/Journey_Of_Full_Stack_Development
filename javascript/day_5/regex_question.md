@@ -1,7 +1,3 @@
-
----
-
-````md
 # Filtering Companies with More Than One "o" Using Regex (Beginner Guide)
 
 This article explains a JavaScript code snippet that filters company names containing **more than one letter "o"**, **without using loops or the `filter()` method**.  

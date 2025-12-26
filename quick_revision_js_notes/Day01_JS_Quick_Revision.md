@@ -1,7 +1,3 @@
-
----
-
-````md
 # Day 1 – JavaScript Quick Revision Notes
 
 ## What is JavaScript?
