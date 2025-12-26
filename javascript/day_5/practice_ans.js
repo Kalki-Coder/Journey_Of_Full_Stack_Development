@@ -5,15 +5,15 @@ let emp3_arr = [];
 // console.log(emp1_arr);
 
 //Declare an array with more than 5 number of elements
-let five_no = Array(6).fill('Google');
+let five_no = Array(6).fill("Google");
 // console.log(five_no);
 //Find the length of your array
 // console.log(five_no.length);
 
 //Get the first item, the middle item and the last item of the array
 let first_item_arr = five_no[0];
-let middle_item_arr = five_no[parseInt(five_no.length/2)];
-let last_item_arr = five_no[five_no.length-1];
+let middle_item_arr = five_no[parseInt(five_no.length / 2)];
+let last_item_arr = five_no[five_no.length - 1];
 // console.log(first_item_arr, middle_item_arr, last_item_arr)
 
 //Declare an array called mixedDataTypes, put different data types in the array and find the length of the array. The array size should be greater than 5
@@ -33,19 +33,19 @@ let last_item_arr = five_no[five_no.length-1];
 
 //Print out each country
 const countries = [
-  'Albania',
-  'Bolivia',
-  'Canada',
-  'Denmark',
-  'Ethiopia',
-  'Finland',
-  'Germany',
-  'Hungary',
-  'Ireland',
-  'Facebook',
-  'Japan',
-  'Kenya'
-]
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Facebook",
+  "Japan",
+  "Kenya",
+];
 
 // let users_country = prompt('enter your country name');
 // if ((((countries.join(' ')).toLowerCase()).split(' ')).indexOf(users_country.toLowerCase()) != -1){
@@ -78,3 +78,16 @@ const countries = [
 // console.log(countries);
 // console.log(countries.splice(0,1));
 
+// const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+// shoppingCart.splice(shoppingCart.indexOf('Tea'),1,'Green Tea');
+// console.log(shoppingCart)
+
+// const frontEnd = ["HTML", "CSS", "JS", "React", "Redux"];
+// const backEnd = ["Node", "Express", "MongoDB"];
+// let fullStack = frontEnd.concat(backEnd);
+// console.log(fullStack);
+
+// The median is the middle value in a list of numbers that has been arranged in order from smallest to largest (or largest to smallest)
+// one middle item or two middle items divided by two
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+console.log((ages.join("+")))
